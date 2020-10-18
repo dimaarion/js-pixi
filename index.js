@@ -18,7 +18,7 @@ function createClass(e, cl) {
   return (e.className = cl);
 }
 let count = 0;
-[1, 2, 3, 4, 5].map(function(x, i) {
+[1, 2, 3, 4].map(function(x, i) {
   count = count + 200;
   createClass(childE(getId("app"), createE("div")), "imagesBlock");
   createClass(
@@ -27,13 +27,22 @@ let count = 0;
   );
   getClass("images", i).src =
     "https://naked-science.ru/wp-content/uploads/2016/04/article_komodo-web.jpg";
+
+  
   getClass("images", i).style.position = "absolute";
-  getClass("images", i).style.marginLeft = -count + 'px' ;
-  getClass("imagesBlock", i).style.width = "200px";
-  getClass("imagesBlock", i).style.height = "200px";
+  getClass("imagesBlock", i).style.width = "400px";
+  getClass("imagesBlock", i).style.height = "400px";
   getClass("imagesBlock", i).style.overflow = "hidden";
   getClass("imagesBlock", i).style.position = "relative";
   getClass("imagesBlock", i).style.float = "left";
+  if (i > 0 && i < 3) {
+    
+    getClass("images", i).style.marginLeft = -count + "px";
+  }
+  if (i > 2 && i < 3) {
+    
+    getClass("images", i).style.marginLeft = 0 + "px";
+  }
 });
 
 getId("app").style.width = "800px";
