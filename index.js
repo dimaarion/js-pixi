@@ -1,7 +1,7 @@
 // Import stylesheets
 import "./style.css";
 import $ from './jquery.js'
-function bagraundImagesPosition(npx, img, r) {
+function bagraundImagesPosition(npx, img, r, m) {
   function getId(e) {
     return document.getElementById(e);
   }
@@ -58,10 +58,10 @@ function bagraundImagesPosition(npx, img, r) {
   getId("app").style.width = npx * 2 + r;
   getId("app").style.margin = "auto";
   $('#app').click(function(){
-$('.imagesBlock').eq(0).animate({marginLeft:'-500px',marginTop:'-500px'},5000)
-$('.imagesBlock').eq(1).animate({marginLeft:'500px',marginTop:'-500px'},5000)
-$('.imagesBlock').eq(2).animate({marginLeft:'-500px',marginTop:'500px'},5000)
-$('.imagesBlock').eq(3).animate({marginLeft:'500px',marginTop:'500px'},5000)
+$('.imagesBlock').eq(0).animate({marginLeft: -m +'px',marginTop: -m + 'px'},5000)
+$('.imagesBlock').eq(1).animate({marginLeft: m +'px',marginTop: -m + 'px'},5000)
+$('.imagesBlock').eq(2).animate({marginLeft: -m +'px',marginTop:m + 'px'},5000)
+$('.imagesBlock').eq(3).animate({marginLeft: m +'px',marginTop: m + 'px'},5000)
   })
   
   
@@ -69,5 +69,6 @@ $('.imagesBlock').eq(3).animate({marginLeft:'500px',marginTop:'500px'},5000)
 bagraundImagesPosition(
   200,
   "https://million-wallpapers.ru/wallpapers/2/87/558105371856796/avrora-vzryv-fioletovyj.jpg",
-  "px"
+  "px",
+  10000
 );
