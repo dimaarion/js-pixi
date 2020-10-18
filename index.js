@@ -1,5 +1,6 @@
 // Import stylesheets
 import "./style.css";
+import "./jquery.js"
 function bagraundImagesPosition(npx, img, r) {
   function getId(e) {
     return document.getElementById(e);
