@@ -1,6 +1,6 @@
 // Import stylesheets
 import "./style.css";
-import "./jquery.js"
+import $ from './jquery.js'
 function bagraundImagesPosition(npx, img, r) {
   function getId(e) {
     return document.getElementById(e);
@@ -57,9 +57,14 @@ function bagraundImagesPosition(npx, img, r) {
 
   getId("app").style.width = npx * 2 + r;
   getId("app").style.margin = "auto";
+  $('.imagesBlock').eq(1).animate({marginLeft:'500px',marginTop:'-500px'},5000)
+  
 }
+$('body').click(function(){
 bagraundImagesPosition(
   200,
   "https://million-wallpapers.ru/wallpapers/2/87/558105371856796/avrora-vzryv-fioletovyj.jpg",
   "px"
 );
+})
+
