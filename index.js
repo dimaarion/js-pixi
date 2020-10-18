@@ -20,5 +20,6 @@ function createClass(e, cl) {
 
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(function(x, i) {
   createClass(childE(getId("app"), createE("div")), "imagesBlock");
-  createClass(childE(document.getElementsByClassName('imagesBlock')[i],createE("img")),'images')
+  createClass(childE(document.getElementsByClassName('imagesBlock')[i],createE("img")),'images');
+  getClass('images',i).src = 'https://naked-science.ru/wp-content/uploads/2016/04/article_komodo-web.jpg'
 });
