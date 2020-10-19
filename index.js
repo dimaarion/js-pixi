@@ -1,7 +1,7 @@
 // Import stylesheets
 import "./style.css";
 import $ from './jquery.js'
-function bagraundImagesPosition(npx, img, r, m) {
+function bagraundImagesPosition(npx, img, r, m,s) {
   function getId(e) {
     return document.getElementById(e);
   }
@@ -58,17 +58,23 @@ function bagraundImagesPosition(npx, img, r, m) {
   getId("app").style.width = npx * 2 + r;
   getId("app").style.margin = "auto";
   $('#app').click(function(){
-$('.imagesBlock').eq(0).animate({marginLeft: -m +'px',marginTop: -m + 'px'},5000)
-$('.imagesBlock').eq(1).animate({marginLeft: m +'px',marginTop: -m + 'px'},5000)
-$('.imagesBlock').eq(2).animate({marginLeft: -m +'px',marginTop:m + 'px'},5000)
-$('.imagesBlock').eq(3).animate({marginLeft: m +'px',marginTop: m + 'px'},5000)
+$('.imagesBlock').eq(0).animate({marginLeft: -m +'px',marginTop: -m + 'px'},s)
+$('.imagesBlock').eq(1).animate({marginLeft: m +'px',marginTop: -m + 'px'},s)
+$('.imagesBlock').eq(2).animate({marginLeft: -m +'px',marginTop:m + 'px'},s)
+$('.imagesBlock').eq(3).animate({marginLeft: m +'px',marginTop: m + 'px'},s)
+
+$('.imagesBlock').eq(0).animate({marginLeft: 0 +'px',marginTop: 0 + 'px'},s)
+$('.imagesBlock').eq(1).animate({marginLeft: count / 2 +'px',marginTop: 0 + 'px'},s)
+$('.imagesBlock').eq(2).animate({marginLeft: 0 +'px',marginTop:npx + 'px'},s)
+$('.imagesBlock').eq(3).animate({marginLeft: count / 2 +'px',marginTop: npx + 'px'},s)
   })
   
   
 }
 bagraundImagesPosition(
-  200,
-  "https://million-wallpapers.ru/wallpapers/2/87/558105371856796/avrora-vzryv-fioletovyj.jpg",
+  600,
+  "https://avatars.mds.yandex.net/get-pdb/918543/547b2fdb-1352-4741-8832-f0c9bfaa95a5/s1200",
   "px",
-  10000
+  1000,
+  1000
 );
