@@ -1,7 +1,7 @@
 // Import stylesheets
 import "./style.css";
-import $ from './jquery.js'
-function bagraundImagesPosition(npx, img, r, m,s) {
+import $ from "./jquery.js";
+function bagraundImagesPosition(npx, img, r, m, s) {
   function getId(e) {
     return document.getElementById(e);
   }
@@ -57,19 +57,33 @@ function bagraundImagesPosition(npx, img, r, m,s) {
 
   getId("app").style.width = npx * 2 + r;
   getId("app").style.margin = "auto";
-  $('#app').click(function(){
-$('.imagesBlock').eq(0).animate({marginLeft: -m +'px',marginTop: -m + 'px'},s)
-$('.imagesBlock').eq(1).animate({marginLeft: m +'px',marginTop: -m + 'px'},s)
-$('.imagesBlock').eq(2).animate({marginLeft: -m +'px',marginTop:m + 'px'},s)
-$('.imagesBlock').eq(3).animate({marginLeft: m +'px',marginTop: m + 'px'},s)
+  $("#app").click(function() {
+    $(".imagesBlock")
+      .eq(0)
+      .animate({ marginLeft: -m + "px", marginTop: -m + "px" }, s);
+    $(".imagesBlock")
+      .eq(1)
+      .animate({ marginLeft: m + "px", marginTop: -m + "px" }, s);
+    $(".imagesBlock")
+      .eq(2)
+      .animate({ marginLeft: -m + "px", marginTop: m + "px" }, s);
+    $(".imagesBlock")
+      .eq(3)
+      .animate({ marginLeft: m + "px", marginTop: m + "px" }, s);
 
-$('.imagesBlock').eq(0).animate({marginLeft: 0 +'px',marginTop: 0 + 'px'},s)
-$('.imagesBlock').eq(1).animate({marginLeft: count / 2 +'px',marginTop: 0 + 'px'},s)
-$('.imagesBlock').eq(2).animate({marginLeft: 0 +'px',marginTop:npx + 'px'},s)
-$('.imagesBlock').eq(3).animate({marginLeft: count / 2 +'px',marginTop: npx + 'px'},s)
-  })
-  
-  
+    $(".imagesBlock")
+      .eq(0)
+      .animate({ marginLeft: 0 + "px", marginTop: 0 + "px" }, s);
+    $(".imagesBlock")
+      .eq(1)
+      .animate({ marginLeft: count / 2 + "px", marginTop: 0 + "px" }, s);
+    $(".imagesBlock")
+      .eq(2)
+      .animate({ marginLeft: 0 + "px", marginTop: npx + "px" }, s);
+    $(".imagesBlock")
+      .eq(3)
+      .animate({ marginLeft: count / 2 + "px", marginTop: npx + "px" }, s);
+  });
 }
 bagraundImagesPosition(
   600,
